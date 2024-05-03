@@ -1,0 +1,22 @@
+# Challenge:
+
+# There are two CloudFormation stacks: StackA and StackB.
+
+# In StackA, there are is an S3 bucket with its name.
+# In StackB, you want to read the bucketname from StackA and use it to configure another resource (e.g., an Amazon EC2 instance).
+
+# Your task is to provide the CloudFormation snippet for StackA and StackB that achieves the desired functionality as described above.
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-12345678
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          echo "The exported bucket name is: ${ExportedBucketName}"
+      # ... Additional properties for the EC2 instance
+
+# Add your code here
