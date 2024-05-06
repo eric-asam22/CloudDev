@@ -4,6 +4,9 @@
 # and False otherwise. Anagrams are strings that contain the same characters but may be in a different order.
 
 def is_anagram(str1, str2):
+   if(len(str1)!=(str2)): return False
+   else
+        sorted_str1= ''.join()
 
 
 # Test the function
