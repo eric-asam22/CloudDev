@@ -28,7 +28,7 @@ def main():
     account1.deposit_money(100)
     print("Balance of account 1:", account1.check_balance())
 
-    account1.withdraw_money(150)  # Bug: Account can go negative
+    account1.withdraw_money(150)  
     print("Balance of account 1 after withdrawal:", account1.check_balance())
 
 if __name__ == "__main__":
